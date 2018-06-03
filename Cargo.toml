@@ -1,0 +1,6 @@
+[package]
+name = "rustvsc"
+version = "0.1.0"
+authors = ["Rafael Bachmann <mediumendian@gmail.com>"]
+
+[dependencies]
