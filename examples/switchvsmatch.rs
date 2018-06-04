@@ -1,28 +1,19 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+use std::io::{self, BufRead};
 
-int main() {
-    int choice = 0;
-    while (1) {
-        printf("Enter an integer number from 1 to 20 inclusive\n");
-        if (scanf("%d", &choice) != 1) {
-            break;
-        }
-        switch(choice) {
-            case 0 ... 5:
-                printf("Really low number\n");
-                break;
-            case 6 ... 15:
-                printf("Thats better\n");
-                break;
-            case 16 ... 20:
-                printf("Up there\n");
-                break;
-            default:
-                printf("I said 0 to 20, inclusive!\n");
+fn main() {
+    loop {
+        println!("Enter an integer number from 1 to 20 inclusive\n");
+
+        let stdin = io::stdin();
+        let buffer = stdin.lock().lines().next().unwrap().unwrap();
+
+        let choice: usize = buffer.parse().unwrap_or(100);
+
+        match choice {
+            0..=5 => println!("Really low number"),
+            6..=15 => println!("Thats better"),
+            16..=20 => println!("Up there"),
+            _ => println!("I said 0 to 20, inclusive!"),
         }
     }
-
-    return 0;
 }
