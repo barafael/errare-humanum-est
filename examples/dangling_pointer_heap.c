@@ -1,4 +1,4 @@
-#include "Person.h"
+#include "person.h"
 
 int main() {
   Person *person = new_person(25, "Kiberius Tirk");

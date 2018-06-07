@@ -1,4 +1,4 @@
-#include "Person.h"
+#include "person.h"
 
 Person *new_person(int age, char *name) {
   Person *p = malloc(sizeof(Person));

@@ -4,7 +4,7 @@
 #define BUFFER_SIZE 15
 
 /* Compile with -fno-stack-protector  or similar */
-int main(void) {
+int main() {
     char buffer[BUFFER_SIZE];
     int password = 0;
 
