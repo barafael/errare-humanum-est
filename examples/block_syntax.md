@@ -125,3 +125,13 @@ Nothing beats preprocessor based polymorphism! \s
     ((num) < (val) ? (val) : (num)) \
 printf("%d\n", at_least_val(10, 5)); // < prints 10
 ```
+
+```rust
+fn at_least_val<T: Copy + PartialOrd>(val: T, res: T) -> T {
+    if res < val {
+        val
+    } else {
+        res
+    }
+}
+```
