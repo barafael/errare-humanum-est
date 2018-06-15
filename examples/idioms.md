@@ -1,6 +1,8 @@
 # Some idioms from Python and Rust
 
-## Enumerating some array
+## Examples taken from http://benjamincongdon.me/blog/2018/03/23/Python-Idioms-in-Rust/
+
+### Enumerating some array
 
 Python:
 ```python
@@ -17,7 +19,7 @@ for (idx, val) in arr.iter().enumerate() {
 }
 ```
 
-## Zipping iterators until one is empty
+### Zipping iterators until one is empty
 Python:
 ```python
 letters = ['a', 'b', 'c']
@@ -44,7 +46,7 @@ for zipped in start_at_10.zip(letters) {
 }
 ```
 
-## Tuples and Destructuring
+### Tuples and Destructuring
 Python:
 ```python
 foo = ('foo', 1, None)
@@ -61,7 +63,7 @@ println!("{}", a); // "foo"
 println!("{}", foo.0); // "foo"
 ```
 
-## "Ternary operator" or single-line if-statement
+### "Ternary operator" or single-line if-statement
 Python:
 ```python
 result = expensive_function() if some_condition else None
