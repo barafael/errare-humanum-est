@@ -3,7 +3,7 @@
 #include <string.h>
 
 #define LARGE_BUFFER 512
-#define SMALL_BUFFER ((LARGE_BUFFER/2) - 8)
+#define SMALL_BUFFER ((LARGE_BUFFER / 2) - 8)
 
 int main() {
     char *buf1R1;
@@ -19,7 +19,7 @@ int main() {
     buf3R2 = malloc(SMALL_BUFFER);
 
     char *str = "reallyreallyreallyreallyreallyreallyreallyreallyreallyreallyreallyreallyreallylong";
-    strncpy(buf2R1, str, LARGE_BUFFER-1);
+    strncpy(buf2R1, str, LARGE_BUFFER - 1);
     printf("first:  %s\n", buf2R2);
     printf("second: %s\n", buf3R2);
     printf("actual: %s\n", buf2R1);

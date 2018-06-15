@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define BUFFER_SIZE 15
 
@@ -11,7 +11,7 @@ int main() {
     printf("Enter password:\n");
     fgets(buffer, BUFFER_SIZE, stdin);
 
-    if(strcmp(buffer, "pass123")) {
+    if (strcmp(buffer, "pass123")) {
         printf("Wrong password\n");
     } else {
         printf("Correct password\n");

@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define ARRAY_SIZE 15
 #define OVERRUN_BYTES 10

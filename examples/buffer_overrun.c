@@ -11,15 +11,15 @@ int main() {
     printf("Enter password:\n");
     gets(buffer);
 
-    if(strcmp(buffer, "pass123")) {
+    if (strcmp(buffer, "pass123")) {
         printf("Wrong password\n");
     } else {
         printf("Correct password\n");
         password = 1;
     }
 
-    if(password) {
-        printf ("Privileged access granted!!!\n");
+    if (password) {
+        printf("Privileged access granted!!!\n");
     }
     return 0;
 }

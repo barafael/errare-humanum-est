@@ -13,7 +13,7 @@ fn main() {
             0..=5 => println!("Really low number"),
             6..=15 => println!("Thats better"),
             16..=20 => println!("Up there"),
-            _ => println!("I said 0 to 20, inclusive!"),
+            _ => println!("I said 0 to 20 inclusive!"),
         }
     }
 }
