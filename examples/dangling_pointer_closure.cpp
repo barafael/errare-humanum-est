@@ -9,6 +9,8 @@ function<int(int)> get_lambda_with_local_reference() {
 }
 
 int main() {
+    // This function returns a lambda which internally keeps a pointer to a local array.
+    // Of course, when using the returned lambda, the array does not exist anymore.
     function<int(int)> function = get_lambda_with_local_reference();
     cout << "lambda uses stack-local reference:" << function(6) << endl;
 }

@@ -1,10 +1,12 @@
 #include <stdio.h>
 
+// Obviously, returning a pointer to a stack-local variable does not work.
 int *get_random_distance() {
     int d = 1356;
     return &d;
 }
 
+// A static variable is not really stack-local: it lives in static memory
 int *get_random_distance_static() {
     static int d = 1356;
     return &d;

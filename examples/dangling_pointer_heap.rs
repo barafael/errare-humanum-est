@@ -5,8 +5,10 @@ fn main() {
 
     println!("{:#?}", person);
 
-    let name: &str = &person.name;
+    // get a pointer into the person
+    let name = &person.name;
 
+    // cannot drop, person is borrowed in name
     std::mem::drop(person);
     println!("{} has been set free!\n", name);
 }
