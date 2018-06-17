@@ -1,14 +1,16 @@
-mod person;
-
 fn main() {
-    let person = person::Person::new(25, "Kiberius Tirk");
+    let mut array = Vec::new();
+    for index in 0..10 {
+        array.push(index as u32);
+    }
 
-    println!("{:#?}", person);
+    // Take a pointer into the heap-allocated array
+    let reference = &array[6];
 
-    // get a pointer into the person
-    let name = &person.name;
+    // at this point, reference becomes a dangling pointer
+    std::mem::drop(array);
 
-    // cannot drop, person is borrowed in name
-    std::mem::drop(person);
-    println!("{} has been set free!\n", name);
+    println!("{}'s array has been set free!", *reference);
+    *reference = 3;
+    println!("array[6] was modified to {} after being free'd!", *reference);
 }
