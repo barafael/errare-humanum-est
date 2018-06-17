@@ -1,16 +1,11 @@
-mod person;
-
-impl person::Person {
-    fn enter_black_hole(self) {
-        println!("{} enters black hole!", self.name);
-    }
-}
+use std::io::BufRead;
 
 fn main() {
-    let person = person::Person::new(25, "Kiberius Tirk");
+    let stdin = std::io::stdin();
+    let buffer = stdin.lock().lines().next().unwrap().unwrap();
 
-    println!("{:#?}", person);
-    person.enter_black_hole();
+    std::mem::forget(buffer);
+    //std::mem::drop(buffer);
 
-    println!("{:#?}", person);
+    println!("buffer: {}", buffer);
 }
