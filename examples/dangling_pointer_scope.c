@@ -4,11 +4,10 @@ int main() {
     int *ptr;
     *ptr = 1;
 
-    printf("int at pointer: %d", *ptr);
+    printf("int at pointer: %d\n", *ptr);
     {
         int twelve = 12;
         ptr        = &twelve;
     }
-    printf("%d", *ptr);
-    return 0;
+    printf("%d\n", *ptr);
 }

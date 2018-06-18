@@ -23,5 +23,4 @@ int main() {
     if (password) {
         printf("Privileged access granted!!!\n");
     }
-    return 0;
 }

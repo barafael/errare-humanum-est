@@ -9,5 +9,4 @@ int main() {
         array[index] = 3;
         printf("%d ", array[index]);
     }
-    return 0;
 }

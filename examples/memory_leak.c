@@ -16,5 +16,4 @@ int main() {
     } else {
         printf("Correct password\n");
     }
-    return 0;
 }
