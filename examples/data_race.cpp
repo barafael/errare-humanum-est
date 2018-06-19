@@ -1,4 +1,3 @@
-#include <functional>
 #include <iostream>
 #include <thread>
 
@@ -16,7 +15,7 @@ void transferMoney(int amount, Account &from, Account &to) {
 }
 
 void printSum(Account &a1, Account &a2) {
-    std::cout << (a1.balance + a2.balance) << std::endl; // 3
+    std::cout << (a1.balance + a2.balance) << std::endl;
 }
 
 int main() {
