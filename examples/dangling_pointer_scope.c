@@ -1,13 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    int *ptr;
-    *ptr = 1;
+    int val = 1;
+    int *ptr = &val;
 
-    printf("int at pointer: %d\n", *ptr);
+    printf("int value at location of pointer, in scope: %d\n", *ptr);
+
     {
         int twelve = 12;
-        ptr        = &twelve;
+        ptr = &twelve;
     }
-    printf("%d\n", *ptr);
+
+    printf("twelve, but out of scope: %d\n", *ptr);
 }
