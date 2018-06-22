@@ -5,14 +5,13 @@
 
 /* Compile with -fno-stack-protector */
 int main() {
-    // gets is a dangerous function and gcc even warns when using it.
-    // Here, gets overwrites a part of the stack when a long text is entered on stdin,
-    // corrupting a variable that comes after the input buffer on the stack.
-    char buffer[BUFFER_SIZE];
+    // fgets is somewhat better than gets. But one can still use it wrong.
+    // The fundamental problem is that array size is unknown.
+    char buffer[BUFFER_SIZE - 5];
     int password = 0;
 
     printf("Enter password:\n");
-    gets(buffer);
+    fgets(buffer, BUFFER_SIZE, stdin);
 
     if (strcmp(buffer, "pass123") == 0) {
         printf("Correct password\n");
