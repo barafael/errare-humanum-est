@@ -4,6 +4,7 @@
 #define BUF_SIZE 16
 
 int main() {
+    puts("Enter your name!");
     char *buffer = malloc(BUF_SIZE);
     
     fgets(buffer, BUF_SIZE, stdin);

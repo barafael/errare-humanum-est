@@ -10,10 +10,10 @@ fn main() {
 
     if buffer == "pass123" {
         println!("Correct password!");
-        std::mem::drop(buffer);
+        drop(buffer);
     } else {
         println!("Wrong password!");
-        std::mem::drop(buffer);
+        drop(buffer);
     }
-    std::mem::drop(buffer);
+    drop(buffer);
 }

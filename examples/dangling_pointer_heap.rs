@@ -5,10 +5,10 @@ fn main() {
     }
 
     // Take a pointer into the heap-allocated array
-    let reference = &array[6];
+    let reference = &mut array[6];
 
     // at this point, reference becomes a dangling pointer
-    std::mem::drop(array);
+    drop(array);
 
     println!("{}'s array has been set free!", *reference);
     *reference = 3;
