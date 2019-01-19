@@ -1,4 +1,5 @@
 fn main() {
+    /* Vec is heap-allocated, growing (reallocating) array */
     let mut array = Vec::new();
     for index in 0..10 {
         array.push(index as u32);

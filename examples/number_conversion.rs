@@ -1,8 +1,8 @@
 fn main() {
-    let four: u32 = 4;
-    let three: u32 = 3;
+    let four = 4;
+    let three = 3;
 
-    let half: f64 = 0.5;
+    let half = 0.5;
 
     println!("add u32 and f64    : 4 + 0.5 = {}", four + half);
     println!("divide u32 and u32 : 4 / 3   = {}", four / three);

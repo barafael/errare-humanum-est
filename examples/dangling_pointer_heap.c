@@ -14,6 +14,7 @@ int main() {
     // at this point, ptr becomes a dangling pointer
     free(array);
 
+    // Even clang does not seem to detect this yet
     printf("%d's array has been set free!\n", *ptr);
     *ptr = 3;
     printf("array[6] was modified to %d after being free'd!\n", *ptr);
