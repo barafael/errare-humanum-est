@@ -2,5 +2,6 @@
 name = "rustvsc"
 version = "0.1.0"
 authors = ["Rafael Bachmann <mediumendian@gmail.com>"]
+edition = "2021"
 
 [dependencies]
